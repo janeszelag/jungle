@@ -4,7 +4,7 @@
     <h1>My Cart</h1>
   </header>
   <% if enhanced_cart.length == 0 %>
-  <a class="alert alert-info" role="alert" href="/"> Your cart is empty. Click here to start shopping!</a>
+  <%= link_to "Cart empty. Click here to start shopping.", root_path, class: 'btn btn-lg btn-primary' %>
   <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
