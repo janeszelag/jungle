@@ -19,7 +19,7 @@
       </thead>
       <tbody>
       <% @line_order.each do |item| %>
-        <%= render 'line_item', line_item: item, quantity: item[:quantity].to_i %>
+        <%= render 'line_item', line_item: item %>
       <% end %>
       </tbody>
       <tfoot>
