@@ -28,7 +28,22 @@
         <li>
         <%= link_to 'About us', "/about"%>
         </li>
-      </ul>
+        <% if current_user %>
+        <li>
+        <p class="navbar-text"> <%= current_user.email %> </p>
+        </li>
+        <li>
+        <%= link_to "Logout", '/logout' %>
+        </li>
+        <% else %>
+        <li>
+        <%= link_to 'Login', '/login' %>
+        </li>
+        <li>
+         <%= link_to 'Signup', '/signup' %>
+        </li>
+        </ul>
+        <% end %>
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
